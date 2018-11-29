@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+            <!--Tree view-->
+            <record model="ir.ui.view" id="axo_category_tree_view">
+                <field name="name">product.internal.tree</field>
+                <field name="model">product.internal</field>
+                <field name="type">tree</field>
+                <field name="arch" type="xml">
+                    <tree editable="bottom">
+                        <field name="name"/>
+                        <field name="code"/>
+                    </tree>
+                </field>
+            </record>
+			
+			<!-- Action view-->
+            <record model="ir.actions.act_window" id="axo_categ_action_view">
+                <field name="name">Catégorie Emplac.</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">product.internal</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree</field>
+            </record>
+
+            <!--Tree view product.display-->
+            <record model="ir.ui.view" id="axo_display_tree_view">
+                <field name="name">product.display.tree</field>
+                <field name="model">product.display</field>
+                <field name="type">tree</field>
+                <field name="arch" type="xml">
+                    <tree editable="bottom">
+                        <field name="name"/>
+                        <field name="code"/>
+                    </tree>
+                </field>
+            </record>
+			
+			<!-- Action view-->
+            <record model="ir.actions.act_window" id="axo_display_action_view">
+                <field name="name">Type d'affichage</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">product.display</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree</field>
+            </record>
+            
+            <!--Tree view res.city-->
+            <record model="ir.ui.view" id="axo_city_tree_view">
+                <field name="name">res.city.tree</field>
+                <field name="model">res.city</field>
+                <field name="type">tree</field>
+                <field name="arch" type="xml">
+                    <tree editable="bottom">
+                        <field name="name"/>
+                        <field name="code"/>
+                    </tree>
+                </field>
+            </record>
+			
+			<!-- Action view-->
+            <record model="ir.actions.act_window" id="axo_city_action_view">
+                <field name="name">Ville</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">res.city</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree</field>
+            </record>
+
+            <!--Tree view res.city-->
+            <record model="ir.ui.view" id="axo_modalit_tree_view">
+                <field name="name">modalite.modalite.tree</field>
+                <field name="model">modalite.modalite</field>
+                <field name="type">tree</field>
+                <field name="arch" type="xml">
+                    <tree editable="bottom">
+                        <field name="name"/>
+                        <field name="code"/>
+                    </tree>
+                </field>
+            </record>
+			
+			<!-- Action view-->
+            <record model="ir.actions.act_window" id="axo_modali_action_view">
+                <field name="name">Modalités du paiement</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">modalite.modalite</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree</field>
+            </record>
+            
+            <!--Tree view res.city-->
+            <record model="ir.ui.view" id="axo_mode_tree_view">
+                <field name="name">payment.mode.tree</field>
+                <field name="model">payment.mode</field>
+                <field name="type">tree</field>
+                <field name="arch" type="xml">
+                    <tree editable="bottom">
+                        <field name="name"/>
+                        <field name="code"/>
+                    </tree>
+                </field>
+            </record>
+			
+			<!-- Action view-->
+            <record model="ir.actions.act_window" id="axo_mode_action_view">
+                <field name="name">Mode de paiement</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">payment.mode</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree</field>
+            </record>                                                           		
+</odoo>
