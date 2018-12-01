@@ -83,13 +83,13 @@
                         <td>
                             <span t-field="line.adresse"/>
                         </td>
-                        <td class="text-center">
+                        <td class="text-right">
                             <span t-field="line.largeur"/>
                         </td>
-                        <td class="text-center">
+                        <td class="text-right">
                             <span t-field="line.hauteur"/>
                         </td>
-                        <td class="text-center">
+                        <td class="text-right">
                             <span t-field="line.product_qty"/>
                         </td>
                         
