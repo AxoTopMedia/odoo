@@ -214,7 +214,7 @@
 		                <field name="area"/>
 		                <field name="du"/>
 		                <field name="au"/>
-		                <field name="month_nbr" invisible="1"/>
+		                <field name="month_nbr" />
 		            </xpath>
 		            <xpath expr="//field[@name='invoice_line_ids']/tree//field[@name='name']" position="replace">
 		                <field name="name" required="0" invisible="1"/>

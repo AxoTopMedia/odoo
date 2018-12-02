@@ -2,12 +2,14 @@ from odoo import models, fields, api,_
 from odoo.exceptions import UserError, AccessError, ValidationError
     
 
-class AccountInvoiceLine(models.Model):
+class InvoiceM(models.Model):
     _inherit = 'account.invoice.line'
 
     @api.one
     def asset_create(self):
         if self.asset_category_id and self.invoice_id.refrence_id =='contract':
+            print('---------------')
+            print('---------------')
             vals = {
                 'name': self.name,
                 'code': self.invoice_id.number or False,
@@ -20,7 +22,7 @@ class AccountInvoiceLine(models.Model):
                 'invoice_id': self.invoice_id.id,
                 'method_number': self.month_nbr,
             }
-            changed_vals = self.env['account.asset.asset'].onchange_category_id_values(vals['category_id'])
+            changed_vals = self.env['account.asset.asset'].onchange_category_id_values(vals['category_id','method_number'])
             vals.update(changed_vals['value'])
             asset = self.env['account.asset.asset'].create(vals)
             if self.asset_category_id.open_asset:
