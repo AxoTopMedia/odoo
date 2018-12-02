@@ -22,8 +22,10 @@ class InvoiceM(models.Model):
                 'method_number': self.month_nbr,
             }
             rev = self.env['account.asset.category'].browse(self.invoice_id.company_id.id)
-            rev.write({'method_number':self.month_nbr})
-            
+            if self.month_nbr == 0:
+                rev.write({'method_number':5})
+            else:
+                rev.write({'method_number':self.month_nbr})
             changed_vals = self.env['account.asset.asset'].onchange_category_id_values(vals['category_id'])
             vals.update(changed_vals['value'])
             asset = self.env['account.asset.asset'].create(vals)
@@ -31,4 +33,3 @@ class InvoiceM(models.Model):
                 asset.validate()
         return True
     
-        
