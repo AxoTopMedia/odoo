@@ -20,7 +20,7 @@ class InvoiceM(models.Model):
                 'currency_id': self.invoice_id.company_currency_id.id,
                 'date': self.invoice_id.date_invoice,
                 'invoice_id': self.invoice_id.id,
-                'method_number': self.month_nbr,
+                'method_number': 10,
             }
             changed_vals = self.env['account.asset.asset'].onchange_category_id_values(vals['category_id'])
             vals.update(changed_vals['value'])
