@@ -27,7 +27,7 @@
 					        </tr>
 					        <tr>
 					          <th>Réf. Frs.</th>
-					            <td><span t-field="doc.partner_id.property_account_payable_id.code"/></td>
+					            <td><span t-field="doc.partner_id.ref"/></td>
 					        </tr>
 					    </tbody>
 					</table>

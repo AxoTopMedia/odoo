@@ -23,7 +23,7 @@
 				    <td class="col-xs-6 pull-right"><strong>Date : </strong><span t-field="doc.date_order" t-field-options='{"format": "dd/MM/yyyy"}'/></td>
 				 </tr>
 				  <tr>
-				  	<td ><strong>N° de client : </strong><span t-field="doc.partner_id.property_account_receivable_id.code"/></td>
+				  	<td ><strong>N° de client : </strong><span t-field="doc.partner_id.ref"/></td>
 				  	<td ></td>
 				    <td ><strong>Offre N° : </strong><span t-field="doc.name"/></td>
 				    

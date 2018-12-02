@@ -28,7 +28,7 @@
 					  	<td ><strong>Adresse : </strong><span t-field="o.partner_id.street"/> <span t-field="o.partner_id.zip"/>, <span t-field="o.partner_id.city"/></td>
 					 </tr>
 					  <tr>
-					  	<td ><strong>Code du client : </strong><span t-field="o.partner_id.property_account_receivable_id.code"/></td>
+					  	<td ><strong>Code du client : </strong><span t-field="o.partner_id.ref"/></td>
 					  	<td ></td>
 					  	<td ><strong>ICE N°: </strong><span t-field="o.partner_id.ice"/></td>
 					  </tr>

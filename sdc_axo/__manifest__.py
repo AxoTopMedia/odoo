@@ -14,7 +14,7 @@
             - model2
             - model3
     """,
-    'depends': ['base','mail','sale','account','purchase'],
+    'depends': ['base','mail','sale','account','purchase','account_asset'],
     'summary': 'sale, purchase',
     'data': [
         'views/axo_views.xml',

@@ -8,13 +8,22 @@
             <field name="prefix">D/%(month)s-%(y)s/</field>
             <field name="padding">3</field>
         </record> 
+
+        <!-- Sequences For sale.order -->
+        <record id="seq_res_partner0" model="ir.sequence">
+            <field name="name">partnerc</field>
+            <field name="code">res.partner.c</field>
+            <field name="prefix">C-</field>
+            <field name="padding">6</field>
+        </record> 
+
+        <!-- Sequences For sale.order -->
+        <record id="seq_res_partner1" model="ir.sequence">
+            <field name="name">partnerf</field>
+            <field name="code">res.partner.f</field>
+            <field name="prefix">F-</field>
+            <field name="padding">6</field>
+        </record> 
         
-       <!-- Sequences For sale.order -->
-       <!--  <record id="seq_account_invoice" model="ir.sequence">
-            <field name="name">account.invoice inherit</field>
-            <field name="code">account.invoice</field>
-            <field name="prefix">D/%(month)s-%(y)s/</field>
-            <field name="padding">4</field>
-        </record>    -->
         </data>
 </odoo>

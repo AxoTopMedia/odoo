@@ -307,6 +307,7 @@ class SaleOrderLine(models.Model):
             'adresse':self.adresse,
             'du':self.du,
             'au':self.au,
+            'month_nbr':self.month_nbr,
             'comm_agence':self.comm_agence,
             'discount': self.discount,
             'uom_id': self.product_uom.id,
@@ -393,6 +394,7 @@ class AccountInvoiceLine(models.Model):
     hauteur = fields.Float(string='Hauteur')
     area = fields.Float(string='Surface')
     comm_agence = fields.Integer(string='Comm.Agence')
+    month_nbr = fields.Integer(string='Nbr mois')
     #price_subtotal = fields.Monetary(string='Amount',
         #store=True, readonly=True, compute='_compute_subt', help="Total amount without taxes")
     

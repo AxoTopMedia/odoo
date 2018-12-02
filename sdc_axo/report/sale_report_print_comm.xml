@@ -25,7 +25,7 @@
 				  <tr>
 				  	<td ><strong>Offre N° : </strong><span t-field="doc.name"/></td>
 				  	<td ></td>
-				    <td ><strong>N° de client : </strong><span t-field="doc.partner_id.property_account_receivable_id.code"/></td>
+				    <td ><strong>N° de client : </strong><span t-field="doc.partner_id.ref"/></td>
 				 </tr>
 				  <tr>
 				  	<td >Campagne : <span t-field="doc.compagne"/></td>
