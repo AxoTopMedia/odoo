@@ -22,7 +22,7 @@ class InvoiceM(models.Model):
                 'invoice_id': self.invoice_id.id,
                 'method_number': 10,
             }
-            changed_vals = self.env['account.asset.asset'].onchange_category_id_values(vals['category_id'],vals['method_number'])
+            changed_vals = self.env['account.asset.asset'].onchange_category_id_values(vals['category_id'])
             vals.update(changed_vals['value'])
             asset = self.env['account.asset.asset'].create(vals)
             if self.asset_category_id.open_asset:
