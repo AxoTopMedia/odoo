@@ -8,7 +8,7 @@ from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT, float_compare
 class Partner(models.Model):
     _inherit = 'res.partner'
 
-    ref = fields.Char(string='Internal Reference', index=True, readonly=True)
+    ref = fields.Char(string='Internal Reference')
 
     @api.model
     @api.depends('customer','supplier')
@@ -19,6 +19,8 @@ class Partner(models.Model):
             vals['ref'] = self.env['ir.sequence'].get('res.partner.c')
         elif vals.get('company_type')=='company' and vals.get('supplier')== True:
             vals['ref'] = self.env['ir.sequence'].get('res.partner.f')
+        else:
+            pass
         return super(Partner, self).create(vals) 
     
         
