@@ -1,34 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-			<!-- res company inherit -->
-            <record model="ir.ui.view" id="company_inherit_form_view">
-                <field name="name">res.company.form.inherit</field>
-                <field name="model">res.company</field>
-                <field name="type">form</field>
-                <field name="inherit_id" ref="base.view_company_form"/>
-                <field name="arch" type="xml">
-                <notebook position="inside">
-	                    <page string='Identifiants administratifs'>
-		                   <group>
-		                    <group>
-		                    	<field name="company_type_id"/>
-		                    	<field name="tele" />
-		                    	<field name="date"/>
-		                    	<field name="rc"/>
-		                    	<field name="itp" />
-		                    </group>
-		                    <group>
-		                    	<field name="capital" />
-		                    	<field name="ifs" />
-		                    	<field name="cnss" />
-		                    	<field name="ice" />
-		                    </group>
-		                   </group>
-	                    </page>  	
-                   </notebook>
-                    
-                </field>
-            </record>
 
 			<!-- product.template pany inherit -->
             <record model="ir.ui.view" id="product_temp_inherit_form_view">
@@ -57,39 +28,6 @@
 		                </group>
 	            	</page>
 	            </xpath>
-                </field>
-            </record>
-
-			<!-- res.partner inherit -->
-            <record model="ir.ui.view" id="partner_ste_inherit_form_view">
-                <field name="name">res.partner.form.inherit.if</field>
-                <field name="model">res.partner</field>
-                <field name="type">form</field>
-                <field name="inherit_id" ref="base.view_partner_form"/>
-                <field name="arch" type="xml">      
-	    		<xpath expr="//page[@name='internal_notes']" position="after" attrs="{'invisible':[('company_type','operator','='person')]}">
-	            	<page string='Identifiants'>
-	            		<group>
-		                    <group>
-		                    	<field name="rc"/>
-		                    	<field name="ifs" />
-		                    	<field name="ice"/>
-		                    </group>
-		                    <group>
-		                    	<field name="patente" />
-		                    	<field name="cnss"/>
-		                    </group>
-		                </group>
-	            	</page>
-	            </xpath>
-        
-	    		<xpath expr="//field[@name='vat']" position="after">
-	            	<field name="activite_id"/>
-	            </xpath>
-	    		<xpath expr="//field[@name='property_account_payable_id']" position="after">
-	            	<field name="supplier_account"/>
-	            </xpath>
-	            	
                 </field>
             </record>
             

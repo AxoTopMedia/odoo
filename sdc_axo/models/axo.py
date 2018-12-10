@@ -3,43 +3,7 @@ from odoo import models, fields, api,_
 from odoo.exceptions import UserError, AccessError, ValidationError
 from odoo.addons import decimal_precision as dp
 from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT, float_compare
-    
-class ResCompany(models.Model):
-    _inherit = 'res.company' 
-    
-    rc = fields.Char(string='N°RC')
-    itp = fields.Char(string='Patente')
-    ifs = fields.Char(string='Identifiant Fiscal')
-    cnss = fields.Char(string='CNSS')
-    ice = fields.Char(string='I.C.E')
-    company_type_id = fields.Many2one('res.company.type',string='Type de société')
-    capital = fields.Float(string='Capital')
-    tele = fields.Char(string='Télécopie')
-    date = fields.Date(string='Date inscription')
  
-
-class ResCompanyType(models.Model):
-    _name = 'res.company.type' 
-    
-    name = fields.Char(string='Nom')
-    code = fields.Char(string='Code')
-    
-class Partner(models.Model):
-    _inherit = 'res.partner' 
-    
-    rc = fields.Char(string='Registre du commerce')
-    patente = fields.Char(string='Patente')
-    ifs = fields.Char(string='Identifiant Fiscal')
-    cnss = fields.Char(string='C.N.S.S.')
-    ice = fields.Char(string='I.C.E')
-    activite_id = fields.Many2one('partner.activity',string='Activités')
-    supplier_account = fields.Char(string='Ancien compte fournisseur')
-
-class PartnerActivity(models.Model):
-    _name = 'partner.activity' 
-    
-    name = fields.Char(string='Nom')
-    code = fields.Char(string='Code')
             
 class ProductTemplate(models.Model):
     _inherit = 'product.template' 

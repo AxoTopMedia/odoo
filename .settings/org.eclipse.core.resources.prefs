@@ -1,2 +1,4 @@
 eclipse.preferences.version=1
+encoding//sdc_axo/models/axo.py=utf-8
+encoding//sdc_axo/models/partner.py=utf-8
 encoding//sdc_axo/models/revenu_def.py=utf-8
