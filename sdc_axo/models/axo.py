@@ -159,7 +159,7 @@ class SaleOrder(models.Model):
                 'adresse':order.adresse,
                 'order_id':ord.id,
                 #'taxes_id':[(6, 0, order.tax_id.ids)]
-                'taxes_id':[(6, 0, order.product_id.supplier_taxes_id)]
+                'taxes_id':[(6, 0, order.product_id.supplier_taxes_id[1])]
                 }
             self.env['purchase.order.line'].create(vals)
 
