@@ -147,10 +147,6 @@ class SaleOrder(models.Model):
             quantity=False,
             date=order.order_id.date_order and order.order_id.date_order[:10],
             uom_id=order.product_uom)
-            print('**************************')
-            print([(6, 0, order.tax_id.ids)])
-            print('**************************')
-            print([(6, 0, order.product_id.supplier_taxes_id)])
             vals = {
                 'product_id':order.product_id.id,
                 'product_qty':order.area,
@@ -162,8 +158,7 @@ class SaleOrder(models.Model):
                 'hauteur':order.hauteur,
                 'adresse':order.adresse,
                 'order_id':ord.id,
-                #'taxes_id':[(6, 0, order.tax_id.ids)]
-                'taxes_id':[(6, 0, order.product_id.supplier_taxes_id.id[0])]
+                'taxes_id':[(6, 0, order.tax_id.ids)]
                 }
             self.env['purchase.order.line'].create(vals)
 
