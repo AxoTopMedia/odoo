@@ -159,6 +159,10 @@ class SaleOrder(models.Model):
                 'adresse':order.adresse,
                 'order_id':ord.id,
                 'taxes_id':[(6, 0, order.tax_id.ids)]
+                 print('**************************')
+                 print([(6, 0, order.tax_id.ids)])
+                 print('**************************')
+                 print([(6, 0, order.product_id.supplier_taxes_id)])
                 #'taxes_id':[(6, 0, order.product_id.supplier_taxes_id)]
                 }
             self.env['purchase.order.line'].create(vals)
