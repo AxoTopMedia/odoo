@@ -158,7 +158,7 @@ class SaleOrder(models.Model):
                 'price_unit':seller.price,
                 'largeur':order.largeur,
                 'hauteur':order.hauteur,
-                #'adresse':order.adresse,
+                'adresse':order.adresse,
                 'order_id':ord.id,
                 #'taxes_id':[(6, 0, order.tax_id.ids)]
                 'taxes_id':[(6, 0, order.product_id.supplier_taxes_id.ids)]
