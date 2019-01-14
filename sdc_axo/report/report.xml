@@ -81,4 +81,16 @@
             attachment_use="False"
             print_report_name="'Imprimeur - %s' %(object.name)"
         />
+	
+	<report 
+            id="report_purchase_order_suppl"
+            model="purchase.order"
+            string="Bon de commande fournisseur"
+            report_type="qweb-pdf"
+            name="sdc_axo.report_template_purchase_order_print_supp"
+            file="sdc_axo.report_template_purchase_order_print_supp"
+            attachment_use="False"
+            print_report_name="'Bon de commande Fournisseur - %s' %(object.name)"
+        />
+	
 </odoo>
