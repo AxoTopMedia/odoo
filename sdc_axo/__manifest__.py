@@ -30,6 +30,7 @@
         'report/report_invoice.xml',
         'report/purchase_order_templates.xml',
         'report/purchase_supp_order_templates.xml',
+        'report/report_footer.xml',
         'menu.xml',
     ],
     
