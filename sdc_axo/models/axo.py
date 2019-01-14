@@ -23,6 +23,8 @@ class ProductTemplate(models.Model):
     time = fields.Float(string='Temps de pose')
     visibility = fields.Char(string='Visibilité')
     proximity = fields.Char(string='Proximité')
+    rent_date = fields.Date(string='Date loyer')
+    authorization_request = fields.Date(string='Demande autorisation')
 
 
 class ProductInternal(models.Model):
