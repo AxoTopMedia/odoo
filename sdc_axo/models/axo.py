@@ -173,7 +173,7 @@ class Purshase(models.Model):
     
     largeur = fields.Float(string='Largeur')
     hauteur = fields.Float(string='Hauteur')
-    adresse = fields.Char(string='Adresse')   
+    adresse = fields.Char(string='Description')   
        
                   
 class SaleOrderLine(models.Model):
