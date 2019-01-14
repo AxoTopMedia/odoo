@@ -204,11 +204,11 @@
 		            	<field name="user_id"/>
 		            </xpath>
 	
-		        	<xpath expr="//field[@name='order_line']/tree//field[@name='name']" position="attributes">
+		       	    <!--<xpath expr="//field[@name='order_line']/tree//field[@name='name']" position="attributes">
 		               <attribute name="invisible">1</attribute>
-		            </xpath>
+		            </xpath>-->
 		            <xpath expr="//field[@name='order_line']/tree//field[@name='product_id']" position="after">
-		                <field name="adresse"/>
+		                <!--<field name="adresse"/>-->
 		                <field name="largeur"/>
 		                <field name="hauteur"/>
 		            </xpath>
