@@ -6,6 +6,9 @@
         <div class="page">
             <div class="oe_structure"/> 
             <div class="row">
+		          <div class="col-xs-6 pull-left">
+        			<strong><h3><b>Commande Impression</b></h3></strong>
+        		</div> 
                 <div class="col-xs-6 pull-right">
 					<table class="table table-bordered">
 					    <tbody>
