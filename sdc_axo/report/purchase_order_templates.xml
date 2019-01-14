@@ -10,11 +10,7 @@
 					<table class="table table-bordered">
 					    <tbody>
 					        <tr>
-					          <th>Societé</th>
-					            <td><span t-field="doc.partner_id.parent_id"/></td>
-					        </tr>
-					        <tr>
-					          <th>Nom</th>
+					          <th>Société et/ou contact</th>
 					            <td><span t-field="doc.partner_id"/></td>
 					        </tr>
 					        <tr>
@@ -72,7 +68,7 @@
                         <th class="text-center"><strong>H</strong></th>
                         <th class="text-center"><strong>Surface</strong></th>
                         <th class="text-right"><strong>PU / HT</strong></th>
-                        <th class="text-right"><strong>PT / HT</strong></th>
+                        <th class="text-right"><strong>Montant HT</strong></th>
                     </tr>
                 </thead>
                 <tbody>
