@@ -8,6 +8,11 @@
                 <field name="type">form</field>
                 <field name="inherit_id" ref="product.product_template_form_view"/>
                 <field name="arch" type="xml">      
+			 <xpath expr="//field[@name='list_price']" position="after">
+		            <field name="rent_date"/>
+		            <field name="authorization_request"/>
+		        </xpath>
+			
 	    		<xpath expr="//page[@name='sales']" position="after">
 	            	<page string='Caractéristiques'>
 	            		<group>
@@ -204,16 +209,16 @@
 		            	<field name="user_id"/>
 		            </xpath>
 	
-		        	<xpath expr="//field[@name='order_line']/tree//field[@name='name']" position="attributes">
+		       	    <!--<xpath expr="//field[@name='order_line']/tree//field[@name='name']" position="attributes">
 		               <attribute name="invisible">1</attribute>
-		            </xpath>
-		            <xpath expr="//field[@name='order_line']/tree//field[@name='product_id']" position="after">
-		                <field name="adresse"/>
+		            </xpath>-->
+		            <xpath expr="//field[@name='order_line']/tree//field[@name='name']" position="after">
+		                <!--<field name="adresse"/>-->
 		                <field name="largeur"/>
 		                <field name="hauteur"/>
 		            </xpath>
-		           	<xpath expr="//field[@name='order_line']/form//field[@name='product_id']" position="after">
-		                <field name="adresse"/>
+		           	<xpath expr="//field[@name='order_line']/form//field[@name='name']" position="after">
+		                <!--<field name="adresse"/>-->
 		                <field name="largeur"/>
 		                <field name="hauteur"/>
 		            </xpath>		

@@ -23,6 +23,8 @@ class ProductTemplate(models.Model):
     time = fields.Float(string='Temps de pose')
     visibility = fields.Char(string='Visibilité')
     proximity = fields.Char(string='Proximité')
+    rent_date = fields.Date(string='Date loyer')
+    authorization_request = fields.Date(string='Demande autorisation')
 
 
 class ProductInternal(models.Model):
@@ -146,7 +148,7 @@ class SaleOrder(models.Model):
             partner_id=sup.name,
             quantity=False,
             date=order.order_id.date_order and order.order_id.date_order[:10],
-            uom_id=order.product_uom)      
+            uom_id=order.product_uom)
             vals = {
                 'product_id':order.product_id.id,
                 'product_qty':order.area,
@@ -158,7 +160,8 @@ class SaleOrder(models.Model):
                 'hauteur':order.hauteur,
                 'adresse':order.adresse,
                 'order_id':ord.id,
-                'taxes_id':[(6, 0, order.tax_id.ids)]
+                #'taxes_id':[(6, 0, order.tax_id.ids)]
+                'taxes_id':[(6, 0, order.product_id.supplier_taxes_id.ids)]
                 }
             self.env['purchase.order.line'].create(vals)
 
@@ -172,7 +175,7 @@ class Purshase(models.Model):
     
     largeur = fields.Float(string='Largeur')
     hauteur = fields.Float(string='Hauteur')
-    adresse = fields.Char(string='Adresse')   
+    adresse = fields.Char(string='Description')   
        
                   
 class SaleOrderLine(models.Model):

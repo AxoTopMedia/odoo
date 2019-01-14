@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-<template id="report_template_purchase_order_print">
+<template id="report_template_purchase_order_print_supp">
     <t t-call="web.external_layout">
         <t t-foreach="docs" t-as="doc">
         <div class="page">
             <div class="oe_structure"/> 
             <div class="row">
+		          <div class="col-xs-6 pull-left">
+        			<strong><h3><b>Bon de commande</b></h3></strong>
+        		</div> 
                 <div class="col-xs-6 pull-right">
 					<table class="table table-bordered">
 					    <tbody>
@@ -38,10 +41,7 @@
 			<br></br>
 			<br></br>
 			<br></br>
-      				
-			<div class="col-xs-6 pull-right">
-        			<strong><h3><b>Commande Impression</b></h3></strong>
-        		</div>        			
+      				   			
 			</div>
 
 			<table class="table table-bordered">
@@ -62,11 +62,9 @@
             <table class="table table-condensed">
                 <thead>
                     <tr>
-                        <th><strong>Espace</strong></th>
-                        <th><strong>Adresse</strong></th>
-                        <th class="text-center"><strong>L</strong></th>
-                        <th class="text-center"><strong>H</strong></th>
-                        <th class="text-center"><strong>Surface</strong></th>
+                        <th><strong>Article</strong></th>
+                        <th><strong>Description</strong></th>
+                        <th class="text-center"><strong>Quantité</strong></th>
                         <th class="text-right"><strong>PU / HT</strong></th>
                         <th class="text-right"><strong>Montant HT</strong></th>
                     </tr>
@@ -77,13 +75,7 @@
                             <span t-field="line.product_id"/>
                         </td>
                         <td>
-                            <span t-field="line.adresse"/>
-                        </td>
-                        <td class="text-right">
-                            <span t-field="line.largeur"/>
-                        </td>
-                        <td class="text-right">
-                            <span t-field="line.hauteur"/>
+                            <span t-field="line.name"/>
                         </td>
                         <td class="text-right">
                             <span t-field="line.product_qty"/>
